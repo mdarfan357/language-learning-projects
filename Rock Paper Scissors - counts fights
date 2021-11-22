@@ -1,0 +1,54 @@
+import random
+
+import time
+# P1 won : 333570 (Result obtained under 12 mins)
+# P2 won : 333175
+# Draws : 333255
+
+def algo(player1, player2, n1, n2):
+    P1 = 0
+    P2 = 0
+    draw = 0
+    if player1 == player2:
+        print('Its a Draw!')
+        draw += 1
+
+    elif (player1 == "rock" and player2 == "scissors") or (player1 == "scissors" and player2 == "paper") or (
+            player1 == "paper" and player2 == "rock"):
+        print("{}".format(n1))
+        P1 += 1
+    else:
+        print("{}".format(n2))
+        P2 += 1
+    return P1,P2,draw
+
+
+def cpu_vs_cpu():
+    total_P1 = 0
+    total_P2 = 0
+    total_draw = 0
+    i = int(input("enter no. of fights :"))
+    while i > 0:
+        player1 = random.choice(["rock", "paper", "scissors"])
+        player2 = random.choice(["rock", "paper", "scissors"])
+        print("P1: {}".format(player1))
+        print("P2: {}".format(player2))
+        P1,P2,draw = algo(player1, player2, "P1 wins", "P2 wins")
+        if P1 == 1:
+          total_P1 += 1
+        elif P2 == 1:
+          total_P2 += 1 
+        elif draw == 1:
+          total_draw += 1   
+        i -= 1
+        print("\n")
+        # time.sleep(1.5)
+    print(f"P1 won : {total_P1}")
+    print(f"P2 won : {total_P2}")
+    print(f"Draws : {total_draw}")
+
+    print("Tough day at work! ``(´o`)´´")
+
+
+
+cpu_vs_cpu()
