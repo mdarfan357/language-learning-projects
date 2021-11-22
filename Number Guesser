@@ -1,0 +1,110 @@
+
+####### number guesser ###########
+
+import random
+
+
+def easy():
+    tar = random.randint(1,100)
+    
+    guess = int(input("Guess a no.: "))
+    
+    while guess!= tar:
+        
+        if guess > tar:
+            print("guess lower")
+        elif guess < tar :
+            print("guess higher")
+        
+        guess = int(input("Guess a no.: "))
+            
+    print("Your guess is correct!!")
+        
+        
+        
+def hard():
+    lives = 7
+    tar = random.randint(1,100)
+    print("You have {} lives left".format(lives))
+    guess = int(input("Guess a no.: "))
+    
+    while guess != tar and lives>0 :
+        
+        if guess == tar:
+            print("guess is correct\n")
+        elif guess > tar:
+            print("guess lower\n")
+        elif guess < tar :
+            print("guess higher\n")
+        lives -= 1
+        
+        guess = int(input("Guess a no.: "))
+        print("You have {} lives left".format(lives))
+    if lives !=0:
+        print("Your guess is correct!!")
+    elif lives == 0:
+        print("Sorry You lost the number was {}".format(tar))
+        
+        
+def human():
+    mode = input("enter difficulty easy (e)/hard(h)/quit(q) :").lower()
+    if mode == "e":
+        easy()
+    elif mode == "h":
+        hard()
+
+
+def cpu():
+    x = 0
+    y = 100
+        
+    while x <= y:
+        guess = random.randint(x,y)
+        print("computer guesses {}   | range =({},{}) ".format(guess,x,y))
+        hint = input("Hint? guess higher(h) / guess lower(l) / guess is correct(c) :").lower()
+        while hint not in ['h','l','c']:
+            hint = input("sorry go again guess higher(h) / guess lower(l) / guess is correct(c) :").lower()
+        if hint == "h":
+            x = guess + 1
+        elif hint == "l":
+            y = guess - 1
+        elif hint == "c":
+            break
+        
+   
+    if x >= y:
+        print("The desired number does not exist!")
+    else:    
+        print("HAHA... I win XD")
+
+
+
+while True:
+
+    player = input("who wants to guess? human(h) or computer(c)/quit game(q):").lower()
+    
+    if player == "h":
+        
+        human()
+
+    elif player == "c":
+
+        cpu()
+    
+    elif player == "q":
+
+        break
+    
+    else:
+        print("Sorry Invaild input try again...")
+        pass
+    
+    
+    
+    
+        
+        
+
+
+
+
