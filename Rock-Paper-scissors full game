@@ -1,0 +1,70 @@
+################# Rock paper scissors #################
+import random
+
+import time
+
+
+def algo(player1, player2, n1, n2):
+    if player1 == player2:
+        print('Its a Draw!')
+
+    elif (player1 == "rock" and player2 == "scissors") or (player1 == "scissors" and player2 == "paper") or (
+            player1 == "paper" and player2 == "rock"):
+        print(f"{n1}")
+    else:
+        print(f"{n2}")
+
+def ask_user():
+    player = input("Rock(r) /Paper(p) /Scissors(s)/quit(q) ? :")
+    while player not in ["r", "p", "s"]:
+        player = input("Sorry Invalid Input go again :")
+    return player
+
+def vs_cpu():
+    player = ""
+
+    while player != "q":
+        player = ask_user()
+        cpu = random.choice(["rock", "paper", "scissors"])
+
+        if player == "r":
+            player = "rock"
+        elif player == "p":
+            player = "paper"
+        elif player == "s":
+            player = 'scissors'
+
+        print(f"CPU: {cpu}")
+        algo(player, cpu, "You Win :)", "You lost ╥﹏╥")
+        print("\n")
+        retry = input("go Again? (^_^) (yes/no):")
+        if retry == "yes":
+            vs_cpu()
+        else :
+            break
+
+
+def cpu_vs_cpu():
+    i = int(input("enter no. of fights :"))
+    while i > 0:
+        player1 = random.choice(["rock", "paper", "scissors"])
+        player2 = random.choice(["rock", "paper", "scissors"])
+        print("P1: {}".format(player1))
+        print("P2: {}".format(player2))
+        algo(player1, player2, "P1 wins", "P2 wins")
+        i -= 1
+        time.sleep(1.5)
+    print("Tough day at work! ``(´o`)´´")
+
+
+mode = None
+
+while mode != "q":
+    mode = input("Enter the mode you would like to play(vs cpu /cpu vs cpu/ quit(q) :)")
+    if mode == "vs cpu":
+        vs_cpu()
+    elif mode == "cpu vs cpu":
+        cpu_vs_cpu()
+    elif mode not in ["vs cpu", "cpu vs cpu", "q"]:
+        print("Sorry Invalid Input Try Again...")
+        pass
