@@ -1,4 +1,3 @@
-# Projects done while learning 
 These projects were done by me while I was learning my first programming language in college to better understand the topics taught in class. 
 
 Some of these games are made with python and html and some with only python. 
