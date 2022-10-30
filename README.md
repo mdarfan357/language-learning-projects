@@ -6,5 +6,5 @@ for the games that just have a python file, inorder to run these games you just 
 
 on the other hand for the games that have a html page you can play the game by just running the index.html page.
 
-[Tic-Tak-Toe](https://mdarfan357.github.io/learning-python-projects/Tic_Tac_Toe/)
+[Tic-Tak-Toe](https://mdarfan357.github.io/language-learning-projects/Tic_Tac_Toe/)
 
