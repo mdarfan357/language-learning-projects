@@ -9,10 +9,7 @@ footer {
 }
 body{
     height: auto;
-    /* background: rgb(34,193,195); */
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(10,39,64,1) 100%);
-    /* background: rgb(195,34,34); */
-    /* background: linear-gradient(0deg, rgba(195,34,34,1) 21%, rgba(107,23,23,1) 84%); */
 }
 
 html{
@@ -21,7 +18,6 @@ html{
 }
 .wrapper {
     position: absolute;
-  
     min-height: 100%;
     transform : translate(-50%,-50%);
     top:50%;
@@ -98,12 +94,6 @@ html{
     display: none;
 }
 .footer{
-    /* display: block; */
-    /* color: rgba(250, 250, 250, 0.4); */
-    /* flex: 0 0 1%; */
-    /* font-size: 14px; */
-    /* max-width: 46rem; */
-    /* padding: 0.5rem 1rem; */
     width: 100%;
     text-align:right;
 }
