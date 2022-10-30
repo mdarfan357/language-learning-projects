@@ -70,10 +70,10 @@ restartBtn.addEventListener("click",() => {
 const winner = (letter) => {
     disableButtons();
     if (letter == "X"){
-        popupBackgroundRef[0].style.background = document.body.style.background = "linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(10,39,64,1) 100%)";
+        popupBackgroundRef[0].style.background = "linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(10,39,64,1) 100%)";
         msgRef.innerHTML = "&#x1F389; <br> X  Wins";
     }else{
-        popupBackgroundRef[0].style.background = document.body.style.background = "linear-gradient(0deg, rgba(195,34,34,1) 21%, rgba(107,23,23,1) 84%)";
+        popupBackgroundRef[0].style.background = "linear-gradient(0deg, rgba(195,34,34,1) 21%, rgba(107,23,23,1) 84%)";
         msgRef.innerHTML = "&#x1F389; <br> O  Wins";
     }
 };
