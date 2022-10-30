@@ -94,7 +94,7 @@ html{
 .popup.hide{
     display: none;
 }
-.author-tag{
+.authorTag{
     display: block;
     color: rgba(250, 250, 250, 0.4);
     flex: 0 1 0%;
