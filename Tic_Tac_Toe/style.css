@@ -4,9 +4,7 @@
     box-sizing: border-box;
     font-family: "Raleway",sans-serif;
 }
-footer {
-    display: block;
-}
+
 body{
     height: auto;
     background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(10,39,64,1) 100%);
@@ -93,8 +91,5 @@ html{
 .popup.hide{
     display: none;
 }
-.footer{
-    width: 100%;
-    text-align:right;
-}
+
 
